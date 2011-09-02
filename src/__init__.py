@@ -62,12 +62,12 @@ class MyHandler(BaseHTTPRequestHandler):
                 f = open(curdir + sep + 'page1.html') # same pageagain
                 self.wfile.write(f.read())
 
-                self.wfile.write('<hr/>Debug info<hr/>')
+                self.wfile.write('<hr/>Debug info: ' + target_url + '<hr/>')
                 self.wfile.write('<pre>Summary:<br/>'  + p.summary()   + '</pre>')
                 self.wfile.write('<pre>Bodytext:<br/>' + maintext + '</pre>')
                 self.wfile.write('<pre>Fulltext:<br/>' + p.full_text() + '</pre>')
 
-                self.wfile.write("<hr/><small>Copyright (c) 2011 by thinKING -- Generated on " + str(time.time()) + "</small>")
+                self.wfile.write("<hr/><small>Copyright (c) 2011 by thinKING.com -- Generated on " + str(time.time()) + "</small>")
                 self.wfile.write("</body></html>")
                 f.close()
                 return
