@@ -3,4 +3,33 @@ Dependencies
 
  * python 2.6
  * pyttsx 1.0 (sudo easy_install pyttsx)
- * espeak (for Ubuntu)
+
+Instructions
+============
+
+Install festival (much better speak engine, but little harder to configure)
+Use pyfestival (http://code.google.com/p/pyfestival/)
+
+Festival
+========
+Test festival is working:
+https://help.ubuntu.com/community/TextToSpeech#Testing
+
+Espeak
+======
+Segfaults on Ubuntu 10.10 64:
+https://github.com/parente/pyttsx/issues/3#issuecomment-1210356
+https://github.com/parente/pyttsx/issues/2
+
+
+Solution
+========
+1. User enters URL into input field
+2. App locates content (like Readability)
+3. Start TTS stream
+4. Returns HTML audio snippet to user page
+
+Notes
+=====
+Test festival:
+$ text2wave test -o text.wav
