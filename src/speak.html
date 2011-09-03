@@ -1,0 +1,32 @@
+<html>
+<head><title>Test HTML Audio streaming (tornado version)</title></head>
+<body>
+<h1>Test HTML audio streaming</h1>
+<form id="form" name="form" method="post">
+Url to read:
+<input type="text" id="url" name="url" value="{{url}}" />
+<input type="submit" />
+</form>
+
+{% if sound_file %}
+<div id="audio-pane">
+<audio src="{{sound_file}}" controls="controls" type="audio/wav" autoplay="true" preload="auto" autobuffer>
+Your browser does not support the audio element.
+</audio>
+</div>
+{% end %}
+
+{% if url %}
+<div id="debug">
+<small>
+<hr/>
+<p>Debug info: {{url}}</p>
+Text:
+<p>
+{{body_text}}
+</p>
+<hr/>
+</small>
+<iframe width="100%" src={{url}} />
+</div>
+{% end %}
