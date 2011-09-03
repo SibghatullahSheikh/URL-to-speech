@@ -3,12 +3,16 @@ Dependencies
 
  * python 2.6
  * pyttsx 1.0 (sudo easy_install pyttsx)
+ * tornado 2.0
 
 Instructions
 ============
 
-Install festival (much better speak engine, but little harder to configure)
-Use pyfestival (http://code.google.com/p/pyfestival/)
+ * Install festival (much better speak engine, but little harder to configure)
+ * cd to src/
+ * $ python test.py
+ * Visit localhost:8000
+ * Listen to page
 
 Festival
 ========
