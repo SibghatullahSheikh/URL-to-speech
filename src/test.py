@@ -70,6 +70,7 @@ application = tornado.web.Application([
     # routes
     (r"/", MainHandler),
     (r"/tmp/(.*)", tornado.web.StaticFileHandler,{"path": curdir+sep+'tmp'}),
+    (r"/(favicon.ico)", tornado.web.StaticFileHandler,{"path": curdir+sep}),
     ])
 
 if __name__ == "__main__":
